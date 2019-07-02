@@ -52,7 +52,7 @@ var orm = {
 						+ " (" + cols.toString() + ") " 
 						+ "VALUES (" + printQuestionMarks(vals.length) + ") ";
 
-		console.log(queryString);
+		// console.log(queryString);
 
 		db.query(queryString, vals, function(err, result) {
 		if (err) {

@@ -18,9 +18,9 @@ router.get("/", function(req, res) {
 // POST to add new burger, "devoured" default to "false"
 router.post("/api/burgers", function(req, res) {
 	burger.create([
-		"name"
+		"burger_name"
 	], [
-		req.body.name
+		req.body.burger_name
 	], function(result) {
 		res.json({ id: result.insertId });
 	});
