@@ -1,44 +1,43 @@
 <div class=container>
 <h1>Burger Madness</h1>
 
-<h2>Burgers to be devoured</h2>
+<h3>Burgers to be devoured</h3>
 
-<ul>
+<ul class="nobullet">
   {{#each burgers}}
     {{#unless devoured}}
-      <div></div>
-			{{burger_name}}
+      	<li>
+			<strong>{{burger_name}}</strong>
 
-			<button data-id="{{id}}">
+			<button class="devour-it btn-success btn-sm" data-id="{{id}}">
 					DEVOUR IT!
 			</button>
 
-		
+		</li>
 
     {{/unless}}
   {{/each}}
 </ul>
 
-<h2>Too Late !!! These burgers have been devoured</h2>
+<h3>Too Late !!! These burgers have been devoured</h3>
 
-<ul>
-  	{{#each burgers}}
-    	{{#if devoured}}
-      	{{burger_name}}
-    	{{/if}}
- 	{{/each}}
+<ul class="nobullet">
+	{{#each burgers}}
+		{{#if devoured}}
+			<li>
+				<strong>{{burger_name}}</strong>
+			</li>
+		{{/if}}
+	{{/each}}
 </ul>
 
 <h2>Add a Burger</h2>
 <form class="create-form">
-
-  <div class="form-group">
-    <label for="b_name">Give Your Burger a Name:</label>
-    <input type="text" id="b_name" name="burger_name">
-  </div>
-
-  
-  <button type="submit">Add It!</button>
+	<div class="form-group">
+		<label for="b_name">Give Your Burger a Name:</label>
+		<input type="text" id="b_name" name="burger_name">
+	</div>
+	<button type="submit">Add It!</button>
 </form>
 
 </div>
