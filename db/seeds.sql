@@ -1,4 +1,4 @@
-INSERT INTO burgers (name) 
+INSERT INTO burgers (burger_name) 
 VALUES 	('Impossible Burger'),
 		('Beyond Beef Burger?'),
 		('Southwestern Turkey Burger'),

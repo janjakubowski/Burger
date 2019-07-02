@@ -1,12 +1,14 @@
+var orm = require("../config/orm.js");
+
 var burger = {
 	all: function(callback) {
-		orm.all("burgers", function(res) {
+		orm.selectAll("burgers", function(res) {
 			callback(res);
 		});
 	},
 	// The variables cols and vals are arrays.
 	create: function(cols, vals, callback) {
-		orm.create("burgers", cols, vals, function(res) {
+		orm.insertOne("burgers", cols, vals, function(res) {
 			callback(res);
 		});
 	},
