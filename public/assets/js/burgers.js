@@ -17,7 +17,6 @@ $(function() {
 
 	$(".devour-it").on("click", function(event) {
 		var id = $(this).data("id");
-		console.log("Devour it clicked, id: " + id);
 
 		$.ajax("/api/burgers/" + id, {
 			type: "PUT"
@@ -32,14 +31,24 @@ $(function() {
 		addOne(name);
 	});
 
-	 $(".create-form").on("submit", function(event) {
-		// Make sure to preventDefault on a submit event.
-		event.preventDefault();
-	
-		var newBurger = $("#b_name").val().trim();
+	$(".create-form").on("submit", function(event) {
+	// Make sure to preventDefault on a submit event.
+	event.preventDefault();
 
-		addOne(newBurger);
+	var newBurger = $("#b_name").val().trim();
+
+	addOne(newBurger);
+
 	
-		
-	  });
+	});
+
+	$(".delete-it").on("click", function(event) {
+		var id = $(this).data("id");
+
+		$.ajax("/api/burgers/" + id, {
+			type: "DELETE"
+		}).then(
+			function() { location.reload() }
+		);
+	});
 })
