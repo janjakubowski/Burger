@@ -6,3 +6,4 @@ VALUES 	('Impossible Burger'),
 		('Where is the Beef Burger'),
 		('All American Burger with A Fried Egg');
 
+SELECT * FROM burgers;
