@@ -3,7 +3,6 @@ function addOne (burger_name) {
 	var newBurger = {
 		burger_name: burger_name
 	};
-	console.log("newBurger: " + JSON.stringify(newBurger));
 	$.ajax("/api/burgers", {
 		type: "POST",
 		data: newBurger

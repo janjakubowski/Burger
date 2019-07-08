@@ -1,14 +1,51 @@
-.nobullet {
-    list-style-type: none;
+body, html {
+    width: 100%;
+    height: 100%;
+	 margin: 0;
 }
 
-li {
-    font-size: 1.1rem; 
-    padding-bottom: 10px;
+
+.bg {
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/burgers.jpeg');
+	background-size: cover;
 }
 
-.my-title {
-    text-align: center;
-    font-size: 2.0 rem;
+
+.container {
+	padding: 2.0rem;
 }
 
+
+h1 {
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+	color: #000992;
+	 font-size: 5.0rem;
+}
+
+
+h3 {
+	text-decoration: underline;
+}
+
+
+ul {
+	font-size: 1.25rem; 
+	list-style: none;
+	padding-left: 0;
+	line-height: 2;
+}
+	
+
+.col-box {
+	background-color: rgb(241, 194, 52); 
+	border-radius: 15px;
+	 margin: 12px 0px;
+	 padding: 5px;
+	 font-family: 'Gochi Hand', cursive;
+	 font-weight: bold;
+	 border: solid 5px #000992;
+	 color: #000992;
+}

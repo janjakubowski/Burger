@@ -52,8 +52,6 @@ var orm = {
 						+ " (" + cols.toString() + ") " 
 						+ "VALUES (" + printQuestionMarks(vals.length) + ") ";
 
-		// console.log(queryString);
-
 		db.query(queryString, vals, function(err, result) {
 		if (err) {
 			throw err;
@@ -69,7 +67,6 @@ var orm = {
 		var queryString = "UPDATE " + table 
 						+ " SET " + objToSql(objColVals)
 						+ " WHERE " + condition;
-		console.log(queryString);
 		db.query(queryString, function(err, result) {
 		if (err) {
 			throw err;

@@ -9,7 +9,6 @@ router.get("/", function(req, res) {
 		var handlebarsObject = {
 			burgers: data
 		};
-		// console.log(handlebarsObject);
 		res.render("index", handlebarsObject);
 	});
 });
